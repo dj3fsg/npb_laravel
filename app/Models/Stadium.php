@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stadium extends Model
 {
-    use HasFactory;
+    protected $fillable = ['stadium_name'];
+
+      public function games()
+    {
+        return $this->hasMany(Game::class);
+    }
+
+
 }

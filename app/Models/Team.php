@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
-    use HasFactory;
+    protected $fillable = ['team_name'];
+
+      public function players()
+    {
+        return $this->hasMany(Player::class);
+    }
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
 }

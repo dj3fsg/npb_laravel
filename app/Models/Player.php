@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'team_id',
+        'player_name',
+    ];
+
+      public function batting_orders()
+    {
+        return $this->hasMany(Batting_order::class);
+    }
+
+    public function teams()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }
