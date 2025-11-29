@@ -18,4 +18,9 @@ class Team extends Model
     {
         return $this->hasMany(Team::class);
     }
+
+    //テーブル「teams」のhomeカラム（ホームスタジアムID）追加に伴う修正
+    public function stadiums(){
+        return $this->belongsTo(Stadium::class);
+    }
 }

@@ -14,5 +14,10 @@ class Stadium extends Model
         return $this->hasMany(Game::class);
     }
 
+    //テーブル「teams」のhomeカラム（ホームスタジアムID）追加に伴う修正
+    public function teams(){
+        return $this->hasOne(Stadium::class);
+    }
+
 
 }
