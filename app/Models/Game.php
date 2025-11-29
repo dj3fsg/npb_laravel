@@ -16,8 +16,6 @@ class Game extends Model
     'visiter_score',
     'remarks',
 ];
-//読み取り専用
-    protected $guarded = ['*'];
 
       public function batting_orders()
     {
