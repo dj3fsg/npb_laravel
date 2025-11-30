@@ -17,6 +17,11 @@ class Game extends Model
     'remarks',
 ];
 
+//Call to a member function format() on stringのエラー対応
+protected $casts = [
+    'game_datetime' => 'datetime',
+];
+
       public function batting_orders()
     {
         return $this->hasMany(Batting_order::class);
