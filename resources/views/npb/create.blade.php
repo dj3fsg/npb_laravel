@@ -24,7 +24,6 @@
                 name="game_date"
                 id="game_date"
                 class="form-control"
-                value="{{ old('game_date') }}"
             >
         </div>
 
@@ -36,7 +35,6 @@
                 name="game_time"
                 id="game_time"
                 class="form-control"
-                value="{{ old('game_time') }}"
             >
         </div>
 

@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\NpbController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/npb/games',[NpbController::class, 'index']);
+Route::get('/npb/create',[NpbController::class, 'create']);
+Route::post('/npb/store', [NpbController::class, 'store']);
+Route::get('/npb/edit/{id}',[NpbController::class, 'edit']);
+Route::post('/npb/update/{id}',[NpbController::class, 'update']);
+Route::post('/npb/delete/{id}',[NpbController::class, 'delete']);

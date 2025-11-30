@@ -29,8 +29,8 @@
 
         @foreach($games as $game)
         <tr>
-            <td>{{ $game->game_datetime->format('Y/m/d') }}</td>
-            <td>{{ $game->game_datetime->format('H:i') }}</td>
+            <td>{{ $game['game_datetime']->format('Y/m/d') }}</td>
+            <td>{{ $game['game_datetime']->format('H:i') }}</td>
             <td>{{ $game->homeTeam->team_name. '対' . $game->visiterTeam->team_name }}</td>
             <td>{{ $game['home_score']. '対' . $game['visiter_score'] }}</td>
             <td><a href="{{ url('npb/edit/'.$game->id) }}">>>編集する</a></td>

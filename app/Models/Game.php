@@ -25,6 +25,14 @@ class Game extends Model
     {
         return $this->belongsTo(Stadium::class);
     }
+    public function homeTeam()
+    {
+        return $this->belongsTo(Team::class, 'home_team_id');
+    }
+    public function visiterTeam()
+    {
+        return $this->belongsTo(Team::class, 'visiter_team_id');
+    }
 
 
 
